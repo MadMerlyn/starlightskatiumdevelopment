@@ -11,6 +11,7 @@ function navcontent () {
 	}else{
 		document.getElementById("nav-button").style.display = "block";
 		document.getElementById("navclose").style.display = "block";
+		document.getElementById("main-nav").style.width = "0";
 	}
 }
 
