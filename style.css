@@ -1,0 +1,413 @@
+/*
+=============MAIN STYLES AND THEMATIC COLORS===========
+*/
+@import url('https://fonts.googleapis.com/css?family=Signika');
+html {
+	height: 100%;
+	max-width: 100%;
+}
+
+body {
+	background-color: #040c0f;
+	color: #fff;
+	padding: 0 0 60px 0;
+	margin: 0;
+	font-family: 'Signika', sans-serif;
+	font-size: 16px;
+	text-align: center;
+	height: 100%;
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.big-text {
+	font-size: 2em;
+	line-height: 1.2em;
+}
+
+.responsive-cont {
+	max-width: 1200px;
+	margin: auto;
+}
+
+.imgflip {
+	transform: scale(-1, 1);
+}
+
+.no-mobile {
+	display: none;
+}
+/*
+==============HOME PAGE=============================
+*/
+.ss-homegrid {
+	margin: 0 auto 2em;;
+}
+
+.ss-homegrid img,
+.ss-hero,
+.ss-hero img {
+	width: 100%;
+}
+
+.ss-homegrid img {
+	margin-top: 1em;
+}
+
+.slideshow {
+	grid-column: 1 / span 2;
+	max-height: 600px;
+	height: calc(100vw / 2);
+	position: relative;
+}
+
+.slideshow img {
+	height: 100%;
+}
+
+.ss-hero {
+	position: absolute;
+	overflow: hidden;
+	transition: all 1s;
+}
+
+.ss-hero h1 {
+    position:  absolute;
+    text-shadow: 2px 2px 5px #000;
+	quotes: "\201C" "\201D";
+	font-size: 1.2em;
+	bottom: 1em;
+}
+
+.ss-hero h1::before {
+	content: open-quote;
+}
+
+.ss-hero h1::after {
+	content: close-quote;
+}
+
+.ss-hero h1::before,
+.ss-hero h1::after {
+	font-size: 1.5em;
+	padding: 0.2em;
+}
+
+.ss-hero::after {
+	content: '';
+    z-index: 1000;
+    box-shadow: inset 0.5em 0.5em 5em 1em #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.hours {
+	padding: 0.5em 0 2em 0;
+}
+
+.hours li {
+	display: table;
+	padding: 0.2em;
+}
+.hours li:not(:nth-child(6)) {
+	border-bottom: 1px solid #0a2129;
+}
+
+.hours li span {
+	display: table-cell;
+}
+
+.hours li span:first-child {
+	overflow: hidden;
+	width: 49%;
+	font-size: 1.2em;
+}
+
+.hours li span:not(:first-child) {
+	text-align: right;
+	width: 50%;
+	vertical-align: bottom;
+	padding-left: 0.5em;
+}
+
+.hours li span:nth-child(3) {
+	font-size: 1.2em;
+}
+
+#main  {
+	transition: margin-left .5s;
+	padding: 1.2em;
+}
+
+/*
+==============HEADER STYLES=============================
+*/
+#theme-header {
+	background-image: url("./img/starlightbg.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-bottom: 1px solid #0b2028;
+	margin-bottom: 0;
+}
+
+#theme-header::after {
+	background-image: linear-gradient(#000, #040c0f);
+	height: 100vh;
+	width: 100%;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1000
+}
+
+#theme-header div:not(#main-nav) {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+#theme-header div *:first-child {
+	flex-basis: 100%;
+}
+
+.header-icon {
+	font-size: 2em;
+	color: #0973ba;
+	float: left;
+	padding: 0 0.3em 1em 0;
+}
+
+/*
+===============NAVIGATION================================
+*/
+.sidenav {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1011;
+	top: 0;
+	left: 0;
+	background-color: #111;
+	overflow-x: hidden;
+	padding-top: 5em;
+	transition: 0.5s;
+}
+
+.sidenav a {
+	padding: 0.5em 0.5em 0.5em 2em;
+	text-decoration: none;
+	font-size: 1.3rem;
+	color: #f1f1f1;
+	display: block;
+	transition: 0.3s;
+	box-sizing: border-box;
+}
+
+.sidenav a:not(.closebtn) {
+	width: 100%;
+	padding: 0.5em 0 2em 0;
+	text-align: center;
+}
+
+.sidenav a:hover {
+	color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+	position: absolute;
+	top: 0;
+	right: 1em;
+	margin-left: 4em;
+}
+
+#nav-button {
+	position: fixed;
+	top: 1em;
+	left: 2em;
+	z-index: 1010;
+}
+
+#nav-button:hover {
+	cursor: pointer;
+}
+
+#main {
+	transition: margin-left .5s;
+	padding-top: 0;
+}
+
+/*
+===============DIVIDERS=================================
+*/
+.bluebar {
+	width: 100%;
+	margin: 0 0 0 -1.2em;
+	padding: 2em 1.2em;
+	background-image: linear-gradient(#005ce6, #1a75ff);
+	text-align: center;
+	text-transform: uppercase;
+}
+
+/*
+===============FOOTER STYLES============================
+*/
+#theme-footer {
+	text-align: right;
+	font-size: 0.8em;
+	font-weight: lighter;
+	background-image: linear-gradient(transparent, #0a2129);
+	background-color: transparent;
+	width: 100%;
+	border-top: 1px solid #0b2028;
+}
+
+#theme-footer div {
+	padding: 1em 1em 0 0;
+}
+
+/*
+===============MEDIA QUERIES============================
+*/
+@media screen and (max-width: 470px) {
+	#theme-header div:not(#nav-button):not(#main-nav) {
+		font-size: .875em;
+		margin: 0;
+		padding: 0;
+	}
+}
+@media screen and (max-width: 570px) {
+	#theme-header div:not(#nav-button):not(#main-nav) {
+		font-size: .9em;
+	}
+}
+@media screen and (min-width: 768px) {
+	body {
+		text-align: initial;
+		font-size: 18px;
+		line-height: 1.4em;
+	}
+	
+	#theme-header div {
+		justify-content: space-between;
+	}
+	
+	#theme-header div > *:first-child {
+		flex-basis: initial;
+	}
+	
+	.sidenav {
+		height: auto;
+		display: flex;
+		width: auto;
+		position: initial;
+		z-index: 1011;
+		background-color: inherit;
+		overflow: hidden;
+		padding-top: 0.5em;
+	}
+	.sidenav a {
+		transition: 1s;
+	}
+	.sidenav a:not(.closebtn) {
+		color: inherit;
+		padding: 0.5em 0.5em 0.5em 2em;
+		text-decoration: none;
+		display: inline-block;
+		transition: 0.5s;
+		box-sizing: border-box;
+		padding: 0.2em;
+		margin: 0 .3em;
+		font-size: 0.7em;
+	}
+	.sidenav a:hover {
+		background-image: linear-gradient(#80b3ff, transparent);
+		transform: scale(1.1);
+		transform-origin: 50% 100%;
+		overflow: hidden;
+	}
+	#nav-button {
+		position: static;
+		z-index: 1010;
+		margin-left: 3em;
+	}
+	
+	.ss-homegrid {
+		display: grid;
+		grid-column-gap: 2em;
+		grid-template-columns: 5fr 6fr;
+	}
+	
+	.ss-homegrid-content {
+		grid-column: 2 / 3;
+		grid-row: 2 / span 10;
+	}
+
+	.ss-homegrid img {
+		margin-top: 1.3em;
+	}
+	
+	.ss-homegrid .ss-hero img {
+		margin-top: 0;
+	}
+	
+	.ss-hero h1 {
+		bottom: 0.5em;
+		left: 1.5em;
+		font-size: 1.7em;
+	}
+	
+	.ss-hero img,
+	.ss-hero h1,
+	#theme-header a {
+		transition: all 0.5s ease-in-out;
+	}
+
+	.ss-hero:hover img,
+	#theme-header div > a:hover {
+		transform: scale(1.2);
+	}
+
+	.ss-hero:hover h1 {
+		bottom: 40%;
+		left: 20%;
+		transform: scale(1.5);
+	}
+	
+	.hours  {
+		background-color: #195367;
+		border-radius: 1em;
+		margin-top: 2em;
+		padding: 0.5em 2em 2em 1em;
+	}
+	
+	.no-mobile {
+		display: initial;
+	}
+}
+@media screen and (min-width: 996px) {
+	.sidenav a:not(.closebtn) {
+		font-size: 0.9em;
+	}
+}
+@media screen and (min-width: 1200px) {
+	.sidenav a:not(.closebtn) {
+		font-size: 1em;
+	}
+}
