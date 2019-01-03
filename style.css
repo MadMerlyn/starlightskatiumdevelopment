@@ -346,6 +346,7 @@ ul {
 	}
 	.sidenav a {
 		transition: 1s;
+		border-radius: .3em .3em 0 0;
 	}
 	.sidenav a:not(.closebtn) {
 		color: inherit;
