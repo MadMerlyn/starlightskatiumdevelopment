@@ -194,7 +194,6 @@ ul {
 */
 
 .sidenav {
-	height: 90vh;
 	width: 0;
 	position: fixed;
 	z-index: 1011;
@@ -202,17 +201,21 @@ ul {
 	left: 0;
 	background-color: #111;
 	overflow-x: hidden;
-	padding-top: 5em;
+	padding-top: 4em;
 	transition: 0.5s;
+	height: 100%;
 }
 .sidenav-links {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
+	justify-content: space-between;
+	min-height: 80vh;
+	max-height: 100vh;
 }
 
-.sidenav a {
-	padding: 0.5em 0.5em 0.5em 2em;
+.sidenav > a,
+.sidenav-links a {
+	padding: 0.25em 0.25em 1em;
 	text-decoration: none;
 	font-size: 1.3rem;
 	color: #f1f1f1;
@@ -221,7 +224,7 @@ ul {
 	box-sizing: border-box;
 }
 
-.sidenav a:not(.closebtn) {
+.sidenav > a:not(.closebtn) {
 	margin: 0.5em auto;
 	padding: 1em;
 	text-align: center;
