@@ -342,13 +342,14 @@ ul {
 		justify-content: space-between;
 		width: 100%;
 		align-content: flex-end;
+		min-height: initial;
 	}
 	.sidenav a {
 		transition: 1s;
 	}
 	.sidenav a:not(.closebtn) {
 		color: inherit;
-		padding: 0.5em 0.5em 0.5em 2em;
+		padding: 0.5em 1em;
 		text-decoration: none;
 		display: inline-block;
 		transition: 0.5s;
