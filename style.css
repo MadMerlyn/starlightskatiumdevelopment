@@ -334,6 +334,12 @@ ul {
 		overflow: hidden;
 		padding-top: 0.5em;
 	}
+	.sidenav-links {
+		flex-direction: row;
+		justify-content: space-between;
+		width: 100%;
+		align-content: flex-end;
+	}
 	.sidenav a {
 		transition: 1s;
 	}
@@ -344,8 +350,6 @@ ul {
 		display: inline-block;
 		transition: 0.5s;
 		box-sizing: border-box;
-		padding: 0.2em;
-		margin: 0 .3em;
 		font-size: 0.7em;
 	}
 	.sidenav a:hover {
