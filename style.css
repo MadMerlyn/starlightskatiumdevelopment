@@ -177,28 +177,24 @@ ul {
 	z-index: -1000
 }
 
-#theme-header div:not(#main-nav) {
-	display: flex;
-	justify-content: space-around;
-	flex-wrap: wrap;
-}
-
-#theme-header div *:first-child {
-	flex-basis: 100%;
+#logo,
+#logo img {
+	z-index: 1200;
 }
 
 .header-icon {
 	font-size: 2em;
 	color: #0973ba;
-	float: left;
-	padding: 0 0.3em 1em 0;
+	margin-right: 0.5em;
+	padding-top: 1em;
 }
 
 /*
 ===============NAVIGATION================================
 */
+
 .sidenav {
-	height: 100%;
+	height: 90vh;
 	width: 0;
 	position: fixed;
 	z-index: 1011;
@@ -208,6 +204,11 @@ ul {
 	overflow-x: hidden;
 	padding-top: 5em;
 	transition: 0.5s;
+}
+.sidenav-links {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
 }
 
 .sidenav a {
@@ -221,9 +222,10 @@ ul {
 }
 
 .sidenav a:not(.closebtn) {
-	width: 100%;
-	padding: 0.5em 0 2em 0;
+	margin: 0.5em auto;
+	padding: 1em;
 	text-align: center;
+	width: 100%;
 }
 
 .sidenav a:hover {
@@ -235,6 +237,7 @@ ul {
 	top: 0;
 	right: 1em;
 	margin-left: 4em;
+	text-align: right;
 }
 
 #nav-button {
@@ -285,18 +288,6 @@ ul {
 /*
 ===============MEDIA QUERIES============================
 */
-@media screen and (max-width: 470px) {
-	#theme-header div:not(#nav-button):not(#main-nav) {
-		font-size: .875em;
-		margin: 0;
-		padding: 0;
-	}
-}
-@media screen and (max-width: 570px) {
-	#theme-header div:not(#nav-button):not(#main-nav) {
-		font-size: .9em;
-	}
-}
 @media screen and (min-width: 768px) {
 	body {
 		text-align: initial;
@@ -304,17 +295,38 @@ ul {
 		line-height: 1.4em;
 	}
 	
-	#theme-header div {
-		justify-content: space-between;
+	nav {
+		width: calc(100% - calc(100vw * .22));
 	}
 	
-	#theme-header div > *:first-child {
-		flex-basis: initial;
+	.navhide {
+		display: none;
+	}
+	
+	.flex {
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+	}
+	
+	#logo,
+	#logo img {
+		width: calc(100vw * .22);
+		max-width: 273px
+	}
+	
+	#theme-header {
+		height: 3em;
+	}
+	
+	#theme-header div {
+		justify-content: space-around;
 	}
 	
 	.sidenav {
 		height: auto;
 		display: flex;
+		flex-direction: row;
 		width: auto;
 		position: initial;
 		z-index: 1011;

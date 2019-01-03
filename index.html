@@ -8,13 +8,13 @@
 <body>
 	<!--Main Theme Header-->
 	<header id="theme-header">
-		<div class="responsive-cont">
-			<div>
+		<div class="responsive-cont flex">
+			<div id="logo">
 				<a href="#">
 					<img src="./img/logo.png" alt="Starlight Skatium Logo">
 				</a>
 			</div>
-			<div>
+<!--		<div>
 				<a href="https://goo.gl/maps/DUbKN9WAuxR2" target="_blank">
 					<h4><span class="fas fa-map-marker-alt header-icon"></span>612 N College Avenue<br>
 					<small>Fayetteville, AR 72701</small></h4>
@@ -25,19 +25,33 @@
 					<h4 style="margin-bottom: 0;"><span class="fas fa-phone-square header-icon"></span>(479) 444-7827<br>
 					<small>We'd Love to Hear From You, Click Here</small></h4>
 				</a>
-			</div>
+			</div>	-->
 			<span id="nav-button" onclick="openNav()"><span class="fas fa-bars big-text"></span></span>
+			<nav>
+				<div id="main-nav" class="sidenav">
+					<a href="javascript:void(0)" id="navclose" class="closebtn navhide" onclick="closeNav()"><span class="fas fa-times big-text"></span></a>
+					<div class="sidenav-links">
+						<a href="#">Home</a>
+						<a href="#">Party Info</a>
+						<a href="#">Snack Bar Menu</a>
+						<a href="#">Blog</a>
+						<div class="navhide">
+							<a href="https://goo.gl/maps/DUbKN9WAuxR2" target="_blank">
+								<span class="fas fa-map-marker-alt header-icon"></span>
+								<div style="display:inline-block">612 N College Avenue<br>
+								<small>Fayetteville, AR 72701</small></div>
+							</a>
+						</div>
+						<div class="navhide">
+							<a href="tel:+14794447827" rel="nofollow">
+								<span class="fas fa-phone-square header-icon"></span>
+								<div style="display:inline-block">(479) 444-7827</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</nav>
 		</div>
-		<nav>
-			<div id="main-nav" class="sidenav responsive-cont">
-				<a href="javascript:void(0)" id="navclose" class="closebtn" onclick="closeNav()"><span class="fas fa-times big-text"></span></a>
-				<a href="#">Home</a>
-				<a href="#">Group &amp; Private Parties</a>
-				<a href="#">Party Packages</a>
-				<a href="#">Snack Bar Menu</a>
-				<a href="#">Blog</a>
-			</div>
-		</nav>
 	</header>
 	
 	<!--Home Page Main Content-->

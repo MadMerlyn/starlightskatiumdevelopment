@@ -1,13 +1,13 @@
 const mq = window.matchMedia("(min-width: 768px)");
 var slideIndex = 0
+var logoWidth = 0
 
 //Functions for mobile navigation
 function navcontent () {
 	if (mq.matches) {
 		document.getElementById("nav-button").style.display = "none";
 		document.getElementById("navclose").style.display = "none";
-		document.getElementById("main-nav").style.width = "100%";
-		
+		document.getElementById("main-nav").style.width = "100%";	
 	}else{
 		document.getElementById("nav-button").style.display = "block";
 		document.getElementById("navclose").style.display = "block";
