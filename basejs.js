@@ -40,8 +40,8 @@ function carousel() {
 }
 
 setTimeout(function() {
-	document.getElementById('partyCTA').className = "spin";
-}, 500);
+	document.getElementById('partyCTA').className = "spin no-mobile";
+}, 1000);
 
 carousel();
 navcontent();
