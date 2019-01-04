@@ -198,7 +198,7 @@ ul {
 .sidenav {
 	width: 0;
 	position: fixed;
-	z-index: 1211;
+	z-index: 1212;
 	top: 0;
 	left: 0;
 	background-color: #111;
@@ -346,7 +346,7 @@ ul {
 		flex-direction: row;
 		width: auto;
 		position: initial;
-		z-index: 1011;
+		z-index: 1212;
 		background-color: inherit;
 		overflow: hidden;
 		padding-top: 0.5em;
@@ -391,10 +391,9 @@ ul {
 	.ss-hero img,
 	.ss-hero h1,
 	#theme-header a {
-		transition: all 0.5s ease-in-out;
+		transition: all 0.5s;
 	}
 
-	.ss-hero:hover img,
 	#theme-header div > a:not(:lastchild):hover {
 		transform: scale(1.2);
 	}
