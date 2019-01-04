@@ -49,21 +49,21 @@ ul {
 .no-mobile {
 	display: none;
 }
+.flex {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+.flex > div {
+	width: 100%;
+}
 /*
 ==============HOME PAGE=============================
 */
-.ss-homegrid {
-	margin: 0 auto 2em;;
-}
 
-.ss-homegrid img,
 .ss-hero,
 .ss-hero img {
 	width: 100%;
-}
-
-.ss-homegrid img {
-	margin-top: 1em;
 }
 
 .slideshow {
@@ -181,6 +181,7 @@ ul {
 #logo,
 #logo img {
 	z-index: 1200;
+	margin: auto;
 }
 
 .header-icon {
@@ -197,7 +198,7 @@ ul {
 .sidenav {
 	width: 0;
 	position: fixed;
-	z-index: 1011;
+	z-index: 1211;
 	top: 0;
 	left: 0;
 	background-color: #111;
@@ -248,7 +249,7 @@ ul {
 	position: fixed;
 	top: 1em;
 	left: 2em;
-	z-index: 1010;
+	z-index: 1212;
 }
 
 #nav-button:hover {
@@ -256,7 +257,7 @@ ul {
 }
 
 #partyCTA {
-	z-index: 998;
+	z-index: 550;
 	position: absolute;
 	right: 5em;
 	top: .5em;
@@ -325,12 +326,6 @@ ul {
 		display: none;
 	}
 	
-	.flex {
-		display: flex;
-		justify-content: space-around;
-		flex-wrap: wrap;
-	}
-	
 	#logo,
 	#logo img {
 		width: calc(100vw * .22);
@@ -388,25 +383,6 @@ ul {
 		margin-left: 3em;
 	}
 	
-	.ss-homegrid {
-		display: grid;
-		grid-column-gap: 2em;
-		grid-template-columns: 5fr 6fr;
-	}
-	
-	.ss-homegrid-content {
-		grid-column: 2 / 3;
-		grid-row: 2 / span 10;
-	}
-
-	.ss-homegrid img {
-		margin-top: 1.3em;
-	}
-	
-	.ss-homegrid .ss-hero img {
-		margin-top: 0;
-	}
-	
 	.ss-hero h1 {
 		bottom: 0.5em;
 		left: 1.5em;
@@ -430,10 +406,17 @@ ul {
 		transform: scale(1.5);
 	}
 	
+	.flex > div.leftCol {
+		width: 42%;
+	}
+	
+	.flex > div.rightCol {
+		width: 53%;
+	}
+	
 	.hours  {
 		background-color: #195367;
 		border-radius: 1em;
-		margin-top: 2em;
 		padding: 0.5em 2em 2em 1em;
 	}
 	

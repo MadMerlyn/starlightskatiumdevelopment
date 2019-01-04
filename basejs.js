@@ -38,10 +38,9 @@ function carousel() {
 	x[slideIndex-1].style.opacity = "1";
 	setTimeout(carousel, 4500); //Change image interval in ms
 }
-
 setTimeout(function() {
 	document.getElementById('partyCTA').className = "spin no-mobile";
-}, 1000);
+}, 500);
 
 carousel();
 navcontent();
