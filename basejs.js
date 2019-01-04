@@ -39,6 +39,10 @@ function carousel() {
 	setTimeout(carousel, 4500); //Change image interval in ms
 }
 
+setTimeout(function() {
+	document.getElementById('partyCTA').className = "spin";
+}, 500);
+
 carousel();
 navcontent();
 mq.addListener(navcontent);
