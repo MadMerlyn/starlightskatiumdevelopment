@@ -353,7 +353,6 @@ ul {
 	}
 	.sidenav-links {
 		flex-direction: row;
-		justify-content: space-between;
 		width: 100%;
 		align-content: flex-end;
 		min-height: initial;
